@@ -1,0 +1,19 @@
+query LaunchSearch($find: LaunchFind, $offset: Int, $limit: Int) {
+  launches(find: $find, offset: $offset, limit: $limit) {
+    id
+    launch_date_local
+    mission_name
+    launch_success
+    launch_site {
+      site_name
+    }
+    rocket {
+      rocket_name
+      rocket {
+        description
+        wikipedia
+      }
+    }
+  }
+}
+
